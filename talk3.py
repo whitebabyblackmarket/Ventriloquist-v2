@@ -125,7 +125,6 @@ def chatgpt_streamed(user_input, system_message, conversation_history, bot_name,
     user_input_with_context = user_input
     if relevant_context:
         user_input_with_context = "\n".join(relevant_context) + "\n\n" + user_input
-        print(user_input_with_context)
     messages = [{"role": "system", "content": system_message}] + conversation_history + [{"role": "user", "content": user_input_with_context}]
     temperature = 1
     streamed_completion = client.chat.completions.create(
@@ -195,12 +194,6 @@ def user_chatbot_conversation():
     # Create embeddings for the initial vault content
     vault_embeddings = model.encode(vault_content) if vault_content else []
     vault_embeddings_tensor = torch.tensor(vault_embeddings)
-
-    print("Vault Embeddings:")
-    for i, embedding in enumerate(vault_embeddings_tensor):
-        print(f"Embedding {i}:")
-        print(embedding)
-        print()
     while True:
         audio_file = "temp_recording.wav"
         record_audio(audio_file)
