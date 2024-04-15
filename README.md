@@ -10,4 +10,9 @@ How to install and setup:
 6. on https://huggingface.co/coqui/XTTS-v2 download model
 7. place XTTS-v2 folder in speech-to-rag folder
 8. In talk3.py (openvoice version) set your reference voice PATH on line 254
-9. In xtalk.py (xtts version)
+9. In xtalk.py (xtts version):
+- set PATH to config.json line 69
+- set PATH to XTTS-v2 folder line 73
+- set PATH to reference voice line 251
+10. 
+
