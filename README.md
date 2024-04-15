@@ -1,5 +1,8 @@
 # Speech to Speech with RAG
 
+### YouTube Tutorial:
+https://youtu.be/aNGUTBFP_Wg
+
 ### Requirements for this setup:
 - ffmpeg installed (https://phoenixnap.com/kb/ffmpeg-windows)
 - NVIDIA GPU (will prob work with only CPU too)
