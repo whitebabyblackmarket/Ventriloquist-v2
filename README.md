@@ -3,7 +3,7 @@ Speech to Speech with RAG
 Requirements for this setup:
 - ffmpeg installed (https://phoenixnap.com/kb/ffmpeg-windows)
 - NVIDIA GPU (will prob work with only CPU too)
-- 
+- will add more if needed here
 
 How to install and setup:
 
