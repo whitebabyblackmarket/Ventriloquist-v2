@@ -1,4 +1,4 @@
-Speech to Speech with RAG
+# Speech to Speech with RAG
 
 Requirements for this setup:
 - ffmpeg installed (https://phoenixnap.com/kb/ffmpeg-windows)
