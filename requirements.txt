@@ -8,3 +8,5 @@ sentence-transformers
 soundfile
 langid
 TTS
+pydub
+openai
