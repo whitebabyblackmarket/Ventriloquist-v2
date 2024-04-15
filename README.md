@@ -3,6 +3,8 @@
 ### Requirements for this setup:
 - ffmpeg installed (https://phoenixnap.com/kb/ffmpeg-windows)
 - NVIDIA GPU (will prob work with only CPU too)
+- microphone
+- local LLM setup (default is LM studio)
 - will add more if needed here
 
 ### How to install and setup:
