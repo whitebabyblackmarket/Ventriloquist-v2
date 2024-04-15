@@ -31,7 +31,7 @@ def open_file(filepath):
         return infile.read()
 
 # Initialize the OpenAI client with the API key
-client = OpenAI(base_url="http://localhost:1234/v1", api_key="not-needed")
+client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
 
 # Function to play audio using PyAudio
 def play_audio(file_path):
