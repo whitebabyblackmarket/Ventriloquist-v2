@@ -2,7 +2,7 @@ Speech to Speech with RAG
 
 How to install and setup:
 
-1. git clone
+1. git clone https://github.com/All-About-AI-YouTube/speech-to-rag.git
 2. cd dir speech-to-rag
 3. pip install -r requirements.txt
 4. download https://nordnet.blob.core.windows.net/bilde/checkpoints.zip
