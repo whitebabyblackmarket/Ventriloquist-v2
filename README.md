@@ -21,5 +21,6 @@
 - set PATH to config.json line 69
 - set PATH to XTTS-v2 folder line 73
 - set PATH to reference voice line 251
-10. 
+10. run talk3.py (low latency version)
+11. run xtalk.py (quality voice version)
 
