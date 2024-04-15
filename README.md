@@ -8,6 +8,7 @@ https://youtu.be/aNGUTBFP_Wg
 - NVIDIA GPU (will prob work with only CPU too)
 - microphone
 - local LLM setup (default is LM studio)
+- You might need Pytorch (https://pytorch.org/)
 - will add more if needed here
 
 ### How to install and setup:
