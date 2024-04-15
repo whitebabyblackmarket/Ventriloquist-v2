@@ -1,5 +1,7 @@
 Speech to Speech with RAG
 
+How to install and setup:
+
 1. git clone
 2. cd dir speech-to-rag
 3. pip install -r requirements.txt
