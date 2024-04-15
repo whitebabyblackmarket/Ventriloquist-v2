@@ -1,11 +1,11 @@
 # Speech to Speech with RAG
 
-Requirements for this setup:
+### Requirements for this setup:
 - ffmpeg installed (https://phoenixnap.com/kb/ffmpeg-windows)
 - NVIDIA GPU (will prob work with only CPU too)
 - will add more if needed here
 
-How to install and setup:
+### How to install and setup:
 
 1. git clone https://github.com/All-About-AI-YouTube/speech-to-rag.git
 2. cd dir speech-to-rag
