@@ -1,7 +1,7 @@
 # Speech to Speech with RAG
 
 ### YouTube Tutorial:
-https://youtu.be/aNGUTBFP_Wg
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/aNGUTBFP_Wg/0.jpg)](https://www.youtube.com/watch?v=aNGUTBFP_Wg)
 
 ### Requirements for this setup:
 - ffmpeg installed (https://phoenixnap.com/kb/ffmpeg-windows)
