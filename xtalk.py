@@ -2,17 +2,16 @@ import os
 import torch
 import argparse
 import pyaudio
-import torchaudio
-import numpy as np
 import wave
+import numpy as np
 import openai
-from openai import OpenAI
-import speech_recognition as sr
-from faster_whisper import WhisperModel
-from sentence_transformers import SentenceTransformer, util
-from TTS.tts.configs.xtts_config import XttsConfig
-from TTS.tts.models.xtts import Xtts
 import soundfile as sf
+import speech_recognition as sr
+from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
+from sentence_transformers import SentenceTransformer, util
+from TTS.tts.configs import XttsConfig
+from TTS.tts.models import Xtts
+from openai import OpenAI
 
 # ANSI escape codes for colors
 PINK = '\033[95m'
@@ -21,9 +20,30 @@ YELLOW = '\033[93m'
 NEON_GREEN = '\033[92m'
 RESET_COLOR = '\033[0m'
 
-# Set up the faster-whisper model
-model_size = "medium.en"
-whisper_model = WhisperModel(model_size, device="cuda", compute_type="float16")
+# Set up the distil-whisper model
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
+torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+model_id = "openai/whisper-large-v3"  # Make sure this is the correct distil-whisper model
+
+model = AutoModelForSpeechSeq2Seq.from_pretrained(
+    model_id, torch_dtype=torch_dtype, low_cpu_mem_usage=True, use_safetensors=True
+)
+model.to(device)
+
+processor = AutoProcessor.from_pretrained(model_id)
+
+pipe = pipeline(
+    "automatic-speech-recognition",
+    model=model,
+    tokenizer=processor.tokenizer,
+    feature_extractor=processor.feature_extractor,
+    max_new_tokens=128,
+    chunk_length_s=30,
+    batch_size=16,
+    return_timestamps=True,
+    torch_dtype=torch_dtype,
+    device=device,
+)
 
 # Function to open a file and return its contents as a string
 def open_file(filepath):
@@ -77,7 +97,6 @@ xtts_model.cuda()  # Move the model to GPU if available
 def process_and_play(prompt, audio_file_pth):
     tts_model = xtts_model
     try:
-
         # Use XTTS to synthesize speech
         outputs = tts_model.synthesize(
             prompt,  # Pass the prompt as a string directly
@@ -154,12 +173,10 @@ def chatgpt_streamed(user_input, system_message, conversation_history, bot_name,
         full_response += line_buffer
     return full_response
 
-# Function to transcribe the recorded audio using faster-whisper
+# Function to transcribe the recorded audio using distil-whisper
 def transcribe_with_whisper(audio_file):
-    segments, info = whisper_model.transcribe(audio_file, beam_size=5)
-    transcription = ""
-    for segment in segments:
-        transcription += segment.text + " "
+    result = pipe(audio_file)
+    transcription = result["text"]
     return transcription.strip()
 
 # Function to record audio from the microphone and save to a file
@@ -199,6 +216,7 @@ def user_chatbot_conversation():
     # Create embeddings for the initial vault content
     vault_embeddings = model.encode(vault_content) if vault_content else []
     vault_embeddings_tensor = torch.tensor(vault_embeddings)
+    
     while True:
         audio_file = "temp_recording.wav"
         record_audio(audio_file)
@@ -248,8 +266,9 @@ def user_chatbot_conversation():
         chatbot_response = chatgpt_streamed(user_input, system_message, conversation_history, "Chatbot", vault_embeddings_tensor, vault_content, model)
         conversation_history.append({"role": "assistant", "content": chatbot_response})
         prompt2 = chatbot_response
+        style = "default"
         audio_file_pth2 = "C:/Users/kris_/Python/fsts2/XTTS-v2/samples/emma2.wav"
-        process_and_play(prompt2, audio_file_pth2)
+        process_and_play(prompt2, style, audio_file_pth2)
         if len(conversation_history) > 20:
             conversation_history = conversation_history[-20:]
 

@@ -4,16 +4,15 @@ import argparse
 import pyaudio
 import wave
 from zipfile import ZipFile
-import langid
-import se_extractor
 from api import BaseSpeakerTTS, ToneColorConverter
-import openai
-from openai import OpenAI
-import os
-import time
-import speech_recognition as sr
-from faster_whisper import WhisperModel
+from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 from sentence_transformers import SentenceTransformer, util
+import logging
+import soundfile as sf
+from pydub import AudioSegment
+
+# Set up logging configuration
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s', filename='voice_assistant.log', filemode='w')
 
 # ANSI escape codes for colors
 PINK = '\033[95m'
@@ -22,9 +21,30 @@ YELLOW = '\033[93m'
 NEON_GREEN = '\033[92m'
 RESET_COLOR = '\033[0m'
 
-# Set up the faster-whisper model
-model_size = "medium.en"
-whisper_model = WhisperModel(model_size, device="cuda", compute_type="float16")
+# Set up the distil-whisper model for STT
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
+torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+model_id = "openai/whisper-large-v3"
+
+model = AutoModelForSpeechSeq2Seq.from_pretrained(
+    model_id, torch_dtype=torch_dtype, low_cpu_mem_usage=True, use_safetensors=True
+)
+model.to(device)
+
+processor = AutoProcessor.from_pretrained(model_id)
+
+pipe = pipeline(
+    "automatic-speech-recognition",
+    model=model,
+    tokenizer=processor.tokenizer,
+    feature_extractor=processor.feature_extractor,
+    max_new_tokens=128,
+    chunk_length_s=30,
+    batch_size=16,
+    return_timestamps=True,
+    torch_dtype=torch_dtype,
+    device=device,
+)
 
 # Function to open a file and return its contents as a string
 def open_file(filepath):
@@ -36,24 +56,24 @@ client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
 
 # Function to play audio using PyAudio
 def play_audio(file_path):
-    # Open the audio file
-    wf = wave.open(file_path, 'rb')
-    # Create a PyAudio instance
-    p = pyaudio.PyAudio()
-    # Open a stream to play audio
-    stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
-                    channels=wf.getnchannels(),
-                    rate=wf.getframerate(),
-                    output=True)
-    # Read and play audio data
-    data = wf.readframes(1024)
-    while data:
-        stream.write(data)
+    try:
+        logging.info("Playing audio.")
+        wf = wave.open(file_path, 'rb')
+        p = pyaudio.PyAudio()
+        stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
+                        channels=wf.getnchannels(),
+                        rate=wf.getframerate(),
+                        output=True)
         data = wf.readframes(1024)
-    # Stop and close the stream and PyAudio instance
-    stream.stop_stream()
-    stream.close()
-    p.terminate()
+        while data:
+            stream.write(data)
+            data = wf.readframes(1024)
+        stream.stop_stream()
+        stream.close()
+        p.terminate()
+        logging.info("Audio playback completed.")
+    except Exception as e:
+        logging.error(f"Error during audio playback: {e}")
 
 # Command line arguments
 parser = argparse.ArgumentParser()
@@ -79,106 +99,104 @@ en_source_style_se = torch.load(f'{en_ckpt_base}/en_style_se.pth').to(device)
 
 # Main processing function
 def process_and_play(prompt, style, audio_file_pth):
-    tts_model = en_base_speaker_tts
-    source_se = en_source_default_se if style == 'default' else en_source_style_se
-    speaker_wav = audio_file_pth
-    # Process text and generate audio
     try:
-        target_se, audio_name = se_extractor.get_se(speaker_wav, tone_color_converter, target_dir='processed', vad=True)
+        logging.info("Starting text-to-speech synthesis.")
+        tts_model = en_base_speaker_tts
+        source_se = en_source_default_se if style == 'default' else en_source_style_se
+        target_se, audio_name = se_extractor.get_se(audio_file_pth, tone_color_converter, target_dir='processed', vad=True)
         src_path = f'{output_dir}/tmp.wav'
         tts_model.tts(prompt, src_path, speaker=style, language='English')
         save_path = f'{output_dir}/output.wav'
-        # Run the tone color converter
         encode_message = "@MyShell"
         tone_color_converter.convert(audio_src_path=src_path, src_se=source_se, tgt_se=target_se, output_path=save_path, message=encode_message)
-        print("Audio generated successfully.")
+        logging.info("Audio generated successfully.")
         play_audio(save_path)
     except Exception as e:
-        print(f"Error during audio generation: {e}")
+        logging.error(f"Error during audio generation: {e}")
 
 def get_relevant_context(user_input, vault_embeddings, vault_content, model, top_k=3):
-    """
-    Retrieves the top-k most relevant context from the vault based on the user input.
-    """
-    if vault_embeddings.nelement() == 0:  # Check if the tensor has any elements
+    try:
+        if vault_embeddings.nelement() == 0:
+            return []
+
+        input_embedding = model.encode([user_input])
+        cos_scores = util.cos_sim(input_embedding, vault_embeddings)[0]
+        top_k = min(top_k, len(cos_scores))
+        top_indices = torch.topk(cos_scores, k=top_k)[1].tolist()
+        relevant_context = [vault_content[idx].strip() for idx in top_indices]
+        return relevant_context
+    except Exception as e:
+        logging.error(f"Error retrieving relevant context: {e}")
         return []
 
-    # Encode the user input
-    input_embedding = model.encode([user_input])
-    # Compute cosine similarity between the input and vault embeddings
-    cos_scores = util.cos_sim(input_embedding, vault_embeddings)[0]
-    # Adjust top_k if it's greater than the number of available scores
-    top_k = min(top_k, len(cos_scores))
-    # Sort the scores and get the top-k indices
-    top_indices = torch.topk(cos_scores, k=top_k)[1].tolist()
-    # Get the corresponding context from the vault
-    relevant_context = [vault_content[idx].strip() for idx in top_indices]
-    return relevant_context
-
 def chatgpt_streamed(user_input, system_message, conversation_history, bot_name, vault_embeddings, vault_content, model):
-    """
-    Function to send a query to OpenAI's GPT-3.5-Turbo model, stream the response, and print each full line in yellow color.
-    """
-    # Get relevant context from the vault
-    relevant_context = get_relevant_context(user_input, vault_embeddings, vault_content, model)
-    # Concatenate the relevant context with the user's input
-    user_input_with_context = user_input
-    if relevant_context:
-        user_input_with_context = "\n".join(relevant_context) + "\n\n" + user_input
-    messages = [{"role": "system", "content": system_message}] + conversation_history + [{"role": "user", "content": user_input_with_context}]
-    temperature = 1
-    streamed_completion = client.chat.completions.create(
-        model="local-model",
-        messages=messages,
-        stream=True
-    )
-    full_response = ""
-    line_buffer = ""
-    for chunk in streamed_completion:
-        delta_content = chunk.choices[0].delta.content
-        if delta_content is not None:
-            line_buffer += delta_content
-            if '\n' in line_buffer:
-                lines = line_buffer.split('\n')
-                for line in lines[:-1]:
-                    print(NEON_GREEN + line + RESET_COLOR)
-                    full_response += line + '\n'
-                line_buffer = lines[-1]
-    if line_buffer:
-        print(NEON_GREEN + line_buffer + RESET_COLOR)
-        full_response += line_buffer
-    return full_response
+    try:
+        logging.info("Starting interaction with local LLM.")
+        relevant_context = get_relevant_context(user_input, vault_embeddings, vault_content, model)
+        user_input_with_context = "\n".join(relevant_context) + "\n\n" + user_input if relevant_context else user_input
+        messages = [{"role": "system", "content": system_message}] + conversation_history + [{"role": "user", "content": user_input_with_context}]
+        temperature = 1
+        streamed_completion = client.chat.completions.create(model="local-model", messages=messages, stream=True)
+        full_response = ""
+        line_buffer = ""
+        for chunk in streamed_completion:
+            delta_content = chunk.choices[0].delta.content
+            if delta_content is not None:
+                line_buffer += delta_content
+                if '\n' in line_buffer:
+                    lines = line_buffer.split('\n')
+                    for line in lines[:-1]:
+                        print(NEON_GREEN + line + RESET_COLOR)
+                        full_response += line + '\n'
+                    line_buffer = lines[-1]
+        if line_buffer:
+            print(NEON_GREEN + line_buffer + RESET_COLOR)
+            full_response += line_buffer
+        logging.info(f"Generated response: {full_response}")
+        return full_response
+    except Exception as e:
+        logging.error(f"Error during LLM interaction: {e}")
+        return "Sorry, I encountered an error while processing your request."
 
-# Function to transcribe the recorded audio using faster-whisper
+# Function to transcribe the recorded audio using distil-whisper
 def transcribe_with_whisper(audio_file):
-    segments, info = whisper_model.transcribe(audio_file, beam_size=5)
-    transcription = ""
-    for segment in segments:
-        transcription += segment.text + " "
-    return transcription.strip()
+    try:
+        logging.info("Starting transcription with Whisper model.")
+        result = pipe(audio_file)
+        transcription = result["text"]
+        logging.info(f"Transcription result: {transcription}")
+        return transcription.strip()
+    except Exception as e:
+        logging.error(f"Error during transcription: {e}")
+        return ""
 
 # Function to record audio from the microphone and save to a file
 def record_audio(file_path):
-    p = pyaudio.PyAudio()
-    stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=1024)
-    frames = []
-    print("Recording...")
     try:
-        while True:
-            data = stream.read(1024)
-            frames.append(data)
-    except KeyboardInterrupt:
-        pass
-    print("Recording stopped.")
-    stream.stop_stream()
-    stream.close()
-    p.terminate()
-    wf = wave.open(file_path, 'wb')
-    wf.setnchannels(1)
-    wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
-    wf.setframerate(16000)
-    wf.writeframes(b''.join(frames))
-    wf.close()
+        logging.info("Starting audio recording.")
+        p = pyaudio.PyAudio()
+        stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=1024)
+        frames = []
+        print("Recording...")
+        try:
+            while True:
+                data = stream.read(1024)
+                frames.append(data)
+        except KeyboardInterrupt:
+            pass
+        print("Recording stopped.")
+        stream.stop_stream()
+        stream.close()
+        p.terminate()
+        wf = wave.open(file_path, 'wb')
+        wf.setnchannels(1)
+        wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
+        wf.setframerate(16000)
+        wf.writeframes(b''.join(frames))
+        wf.close()
+        logging.info("Audio recording completed.")
+    except Exception as e:
+        logging.error(f"Error during audio recording: {e}")
 
 # New function to handle a conversation with a user
 def user_chatbot_conversation():
@@ -223,7 +241,7 @@ def user_chatbot_conversation():
             else:
                 print("Info deletion cancelled.")
             continue
-        elif user_input.lower().startswith(("insert info", "insert info")):
+        elif user_input.lower().startswith(("insert info", "Insert info")):
             print("Recording for info...")
             audio_file = "vault_recording.wav"
             record_audio(audio_file)
