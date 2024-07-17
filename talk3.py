@@ -29,25 +29,29 @@ device = "cuda:0" if torch.cuda.is_available() else "cpu"
 torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
 model_id = "openai/whisper-large-v3"
 
-model = AutoModelForSpeechSeq2Seq.from_pretrained(
-    model_id, torch_dtype=torch_dtype, low_cpu_mem_usage=True, use_safetensors=True
-)
-model.to(device)
+try:
+    model = AutoModelForSpeechSeq2Seq.from_pretrained(
+        model_id, torch_dtype=torch_dtype, low_cpu_mem_usage=True, use_safetensors=True
+    ).to(device)
+    processor = AutoProcessor.from_pretrained(model_id)
+    pipe = pipeline(
+        "automatic-speech-recognition",
+        model=model,
+        tokenizer=processor.tokenizer,
+        feature_extractor=processor.feature_extractor,
+        max_new_tokens=128,
+        chunk_length_s=30,
+        batch_size=16,
+        return_timestamps=True,
+        torch_dtype=torch_dtype,
+        device=device,
+    )
+    logging.info(f"Using device: {device}")
+    print(f"Using device: {device}")
 
-processor = AutoProcessor.from_pretrained(model_id)
-
-pipe = pipeline(
-    "automatic-speech-recognition",
-    model=model,
-    tokenizer=processor.tokenizer,
-    feature_extractor=processor.feature_extractor,
-    max_new_tokens=128,
-    chunk_length_s=30,
-    batch_size=16,
-    return_timestamps=True,
-    torch_dtype=torch_dtype,
-    device=device,
-)
+except Exception as e:
+    logging.error(f"Error initializing model or pipeline: {e}")
+    print(f"Error initializing model or pipeline: {e}")
 
 # Function to open a file and return its contents as a string
 def open_file(filepath):
@@ -117,6 +121,20 @@ def process_and_play(prompt, style, audio_file_pth):
     except Exception as e:
         logging.error(f"Error during audio generation: {e}")
 
+
+# Testing the transcription functionality
+def test_inference(audio_file):
+    try:
+        result = pipe(audio_file)
+        logging.info(f"Transcription result: {result}")
+        print(f"Transcription result: {result}")
+    except Exception as e:
+        logging.error(f"Error during inference: {e}")
+        print(f"Error during inference: {e}")
+
+# Replace 'path_to_audio_file.wav' with your actual audio file path for testing
+test_inference('C:\\Users\\white\\Desktop\\ventriloquist_v2\\processed\\joa\\wavs\\joa_seg0.wav')
+
 def get_relevant_context(user_input, vault_embeddings, vault_content, model, top_k=3):
     try:
         if vault_embeddings.nelement() == 0:
@@ -131,10 +149,6 @@ def get_relevant_context(user_input, vault_embeddings, vault_content, model, top
     except Exception as e:
         logging.error(f"Error retrieving relevant context: {e}")
         return []
-
-import json
-import requests
-import logging
 
 def chatgpt_streamed(user_input, system_message, conversation_history, bot_name, vault_embeddings, vault_content, model):
     try:

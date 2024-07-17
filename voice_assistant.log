@@ -1,28 +1,28 @@
-2024-07-17 13:43:55,141 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
-2024-07-17 13:43:55,341 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/config.json HTTP/11" 200 0
-2024-07-17 13:43:57,089 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/generation_config.json HTTP/11" 200 0
-2024-07-17 13:43:57,151 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/processor_config.json HTTP/11" 404 0
-2024-07-17 13:43:57,219 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/preprocessor_config.json HTTP/11" 200 0
-2024-07-17 13:43:57,282 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/preprocessor_config.json HTTP/11" 200 0
-2024-07-17 13:43:57,340 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/preprocessor_config.json HTTP/11" 200 0
-2024-07-17 13:43:57,394 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/tokenizer_config.json HTTP/11" 200 0
-2024-07-17 13:43:57,554 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/processor_config.json HTTP/11" 404 0
-2024-07-17 13:43:57,682 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
-2024-07-17 13:43:57,683 - DEBUG - load_verify_locations cafile='C:\\ProgramData\\anaconda3\\envs\\vant2\\Library\\ssl\\cacert.pem'
-2024-07-17 13:43:59,494 - INFO - Use pytorch device_name: cpu
-2024-07-17 13:43:59,494 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2024-07-17 13:43:59,543 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
-2024-07-17 13:43:59,596 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
-2024-07-17 13:43:59,676 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
-2024-07-17 13:43:59,746 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
-2024-07-17 13:43:59,825 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
-2024-07-17 13:43:59,889 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
-2024-07-17 13:44:00,140 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
-2024-07-17 13:44:00,244 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6166
-2024-07-17 13:44:00,307 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6166
-2024-07-17 13:44:12,048 - DEBUG - Starting new HTTP connection (1): localhost:1234
-2024-07-17 13:44:12,051 - DEBUG - http://localhost:1234 "POST /v1/chat/completions HTTP/11" 200 None
-2024-07-17 13:44:22,108 - DEBUG - bytecode dump:
+2024-07-17 16:14:00,045 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-07-17 16:14:00,481 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/config.json HTTP/11" 200 0
+2024-07-17 16:14:01,026 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/generation_config.json HTTP/11" 200 0
+2024-07-17 16:14:02,558 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/processor_config.json HTTP/11" 404 0
+2024-07-17 16:14:02,750 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/preprocessor_config.json HTTP/11" 200 0
+2024-07-17 16:14:02,893 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/preprocessor_config.json HTTP/11" 200 0
+2024-07-17 16:14:02,981 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/preprocessor_config.json HTTP/11" 200 0
+2024-07-17 16:14:03,114 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-07-17 16:14:03,289 - DEBUG - https://huggingface.co:443 "HEAD /openai/whisper-large-v3/resolve/main/processor_config.json HTTP/11" 404 0
+2024-07-17 16:14:03,410 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2024-07-17 16:14:03,411 - DEBUG - load_verify_locations cafile='C:\\ProgramData\\anaconda3\\envs\\vant2\\Library\\ssl\\cacert.pem'
+2024-07-17 16:14:05,590 - INFO - Use pytorch device_name: cuda
+2024-07-17 16:14:05,590 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-07-17 16:14:05,646 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-07-17 16:14:05,917 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-07-17 16:14:06,114 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md HTTP/11" 200 0
+2024-07-17 16:14:06,704 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json HTTP/11" 200 0
+2024-07-17 16:14:06,835 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-07-17 16:14:07,119 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json HTTP/11" 200 0
+2024-07-17 16:14:07,402 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-07-17 16:14:07,933 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2/revision/main HTTP/11" 200 6166
+2024-07-17 16:14:08,047 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-MiniLM-L6-v2 HTTP/11" 200 6166
+2024-07-17 16:14:16,488 - DEBUG - Starting new HTTP connection (1): localhost:1234
+2024-07-17 16:14:16,490 - DEBUG - http://localhost:1234 "POST /v1/chat/completions HTTP/11" 200 None
+2024-07-17 16:14:20,253 - DEBUG - bytecode dump:
 >          0	NOP(arg=None, lineno=1144)
            2	LOAD_FAST(arg=0, lineno=1147)
            4	LOAD_CONST(arg=1, lineno=1147)
@@ -86,186 +86,186 @@
          120	RETURN_VALUE(arg=None, lineno=1158)
          122	LOAD_CONST(arg=3, lineno=1158)
          124	RETURN_VALUE(arg=None, lineno=1158)
-2024-07-17 13:44:22,108 - DEBUG - pending: deque([State(pc_initial=0 nstack_initial=0)])
-2024-07-17 13:44:22,108 - DEBUG - stack: []
-2024-07-17 13:44:22,108 - DEBUG - state.pc_initial: State(pc_initial=0 nstack_initial=0)
-2024-07-17 13:44:22,108 - DEBUG - dispatch pc=0, inst=NOP(arg=None, lineno=1144)
-2024-07-17 13:44:22,108 - DEBUG - stack []
-2024-07-17 13:44:22,108 - DEBUG - dispatch pc=2, inst=LOAD_FAST(arg=0, lineno=1147)
-2024-07-17 13:44:22,108 - DEBUG - stack []
-2024-07-17 13:44:22,108 - DEBUG - dispatch pc=4, inst=LOAD_CONST(arg=1, lineno=1147)
-2024-07-17 13:44:22,108 - DEBUG - stack ['$x2.0']
-2024-07-17 13:44:22,108 - DEBUG - dispatch pc=6, inst=BINARY_SUBSCR(arg=None, lineno=1147)
-2024-07-17 13:44:22,108 - DEBUG - stack ['$x2.0', '$const4.1']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=8, inst=STORE_FAST(arg=3, lineno=1147)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$6binary_subscr.2']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=10, inst=LOAD_FAST(arg=1, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack []
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=12, inst=UNARY_NEGATIVE(arg=None, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$threshold10.3']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=14, inst=LOAD_FAST(arg=3, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$12unary_negative.4']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=16, inst=DUP_TOP(arg=None, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$12unary_negative.4', '$x014.5']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=18, inst=ROT_THREE(arg=None, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$12unary_negative.4', '$x014.5', '$16dup_top.6']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=20, inst=COMPARE_OP(arg=1, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$16dup_top.6', '$12unary_negative.4', '$x014.5']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=22, inst=POP_JUMP_IF_FALSE(arg=32, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$16dup_top.6', '$20compare_op.7']
-2024-07-17 13:44:22,109 - DEBUG - end state. edges=[Edge(pc=24, stack=('$16dup_top.6',), blockstack=(), npush=0), Edge(pc=32, stack=('$16dup_top.6',), blockstack=(), npush=0)]
-2024-07-17 13:44:22,109 - DEBUG - pending: deque([State(pc_initial=24 nstack_initial=1), State(pc_initial=32 nstack_initial=1)])
-2024-07-17 13:44:22,109 - DEBUG - stack: ['$phi24.0']
-2024-07-17 13:44:22,109 - DEBUG - state.pc_initial: State(pc_initial=24 nstack_initial=1)
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=24, inst=LOAD_FAST(arg=1, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$phi24.0']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=26, inst=COMPARE_OP(arg=1, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$phi24.0', '$threshold24.1']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=28, inst=POP_JUMP_IF_FALSE(arg=40, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$26compare_op.2']
-2024-07-17 13:44:22,109 - DEBUG - end state. edges=[Edge(pc=30, stack=(), blockstack=(), npush=0), Edge(pc=40, stack=(), blockstack=(), npush=0)]
-2024-07-17 13:44:22,109 - DEBUG - pending: deque([State(pc_initial=32 nstack_initial=1), State(pc_initial=30 nstack_initial=0), State(pc_initial=40 nstack_initial=0)])
-2024-07-17 13:44:22,109 - DEBUG - stack: ['$phi32.0']
-2024-07-17 13:44:22,109 - DEBUG - state.pc_initial: State(pc_initial=32 nstack_initial=1)
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=32, inst=POP_TOP(arg=None, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$phi32.0']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=34, inst=JUMP_FORWARD(arg=4, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack []
-2024-07-17 13:44:22,109 - DEBUG - end state. edges=[Edge(pc=40, stack=(), blockstack=(), npush=0)]
-2024-07-17 13:44:22,109 - DEBUG - pending: deque([State(pc_initial=30 nstack_initial=0), State(pc_initial=40 nstack_initial=0), State(pc_initial=40 nstack_initial=0)])
-2024-07-17 13:44:22,109 - DEBUG - stack: []
-2024-07-17 13:44:22,109 - DEBUG - state.pc_initial: State(pc_initial=30 nstack_initial=0)
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=30, inst=JUMP_FORWARD(arg=4, lineno=1148)
-2024-07-17 13:44:22,109 - DEBUG - stack []
-2024-07-17 13:44:22,109 - DEBUG - end state. edges=[Edge(pc=36, stack=(), blockstack=(), npush=0)]
-2024-07-17 13:44:22,109 - DEBUG - pending: deque([State(pc_initial=40 nstack_initial=0), State(pc_initial=40 nstack_initial=0), State(pc_initial=36 nstack_initial=0)])
-2024-07-17 13:44:22,109 - DEBUG - stack: []
-2024-07-17 13:44:22,109 - DEBUG - state.pc_initial: State(pc_initial=40 nstack_initial=0)
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=40, inst=LOAD_FAST(arg=0, lineno=1151)
-2024-07-17 13:44:22,109 - DEBUG - stack []
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=42, inst=LOAD_CONST(arg=2, lineno=1151)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$x40.0']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=44, inst=BINARY_SUBSCR(arg=None, lineno=1151)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$x40.0', '$const42.1']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=46, inst=STORE_FAST(arg=4, lineno=1151)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$44binary_subscr.2']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=48, inst=LOAD_FAST(arg=1, lineno=1152)
-2024-07-17 13:44:22,109 - DEBUG - stack []
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=50, inst=UNARY_NEGATIVE(arg=None, lineno=1152)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$threshold48.3']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=52, inst=LOAD_FAST(arg=4, lineno=1152)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$50unary_negative.4']
-2024-07-17 13:44:22,109 - DEBUG - dispatch pc=54, inst=DUP_TOP(arg=None, lineno=1152)
-2024-07-17 13:44:22,109 - DEBUG - stack ['$50unary_negative.4', '$x152.5']
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=56, inst=ROT_THREE(arg=None, lineno=1152)
-2024-07-17 13:44:22,110 - DEBUG - stack ['$50unary_negative.4', '$x152.5', '$54dup_top.6']
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=58, inst=COMPARE_OP(arg=1, lineno=1152)
-2024-07-17 13:44:22,110 - DEBUG - stack ['$54dup_top.6', '$50unary_negative.4', '$x152.5']
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=60, inst=POP_JUMP_IF_FALSE(arg=70, lineno=1152)
-2024-07-17 13:44:22,110 - DEBUG - stack ['$54dup_top.6', '$58compare_op.7']
-2024-07-17 13:44:22,110 - DEBUG - end state. edges=[Edge(pc=62, stack=('$54dup_top.6',), blockstack=(), npush=0), Edge(pc=70, stack=('$54dup_top.6',), blockstack=(), npush=0)]
-2024-07-17 13:44:22,110 - DEBUG - pending: deque([State(pc_initial=40 nstack_initial=0), State(pc_initial=36 nstack_initial=0), State(pc_initial=62 nstack_initial=1), State(pc_initial=70 nstack_initial=1)])
-2024-07-17 13:44:22,110 - DEBUG - pending: deque([State(pc_initial=36 nstack_initial=0), State(pc_initial=62 nstack_initial=1), State(pc_initial=70 nstack_initial=1)])
-2024-07-17 13:44:22,110 - DEBUG - stack: []
-2024-07-17 13:44:22,110 - DEBUG - state.pc_initial: State(pc_initial=36 nstack_initial=0)
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=36, inst=LOAD_CONST(arg=1, lineno=1149)
-2024-07-17 13:44:22,110 - DEBUG - stack []
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=38, inst=STORE_FAST(arg=3, lineno=1149)
-2024-07-17 13:44:22,110 - DEBUG - stack ['$const36.0']
-2024-07-17 13:44:22,110 - DEBUG - end state. edges=[Edge(pc=40, stack=(), blockstack=(), npush=0)]
-2024-07-17 13:44:22,110 - DEBUG - pending: deque([State(pc_initial=62 nstack_initial=1), State(pc_initial=70 nstack_initial=1), State(pc_initial=40 nstack_initial=0)])
-2024-07-17 13:44:22,110 - DEBUG - stack: ['$phi62.0']
-2024-07-17 13:44:22,110 - DEBUG - state.pc_initial: State(pc_initial=62 nstack_initial=1)
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=62, inst=LOAD_FAST(arg=1, lineno=1152)
-2024-07-17 13:44:22,110 - DEBUG - stack ['$phi62.0']
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=64, inst=COMPARE_OP(arg=1, lineno=1152)
-2024-07-17 13:44:22,110 - DEBUG - stack ['$phi62.0', '$threshold62.1']
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=66, inst=POP_JUMP_IF_FALSE(arg=78, lineno=1152)
-2024-07-17 13:44:22,110 - DEBUG - stack ['$64compare_op.2']
-2024-07-17 13:44:22,110 - DEBUG - end state. edges=[Edge(pc=68, stack=(), blockstack=(), npush=0), Edge(pc=78, stack=(), blockstack=(), npush=0)]
-2024-07-17 13:44:22,110 - DEBUG - pending: deque([State(pc_initial=70 nstack_initial=1), State(pc_initial=40 nstack_initial=0), State(pc_initial=68 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
-2024-07-17 13:44:22,110 - DEBUG - stack: ['$phi70.0']
-2024-07-17 13:44:22,110 - DEBUG - state.pc_initial: State(pc_initial=70 nstack_initial=1)
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=70, inst=POP_TOP(arg=None, lineno=1152)
-2024-07-17 13:44:22,110 - DEBUG - stack ['$phi70.0']
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=72, inst=JUMP_FORWARD(arg=4, lineno=1152)
-2024-07-17 13:44:22,110 - DEBUG - stack []
-2024-07-17 13:44:22,110 - DEBUG - end state. edges=[Edge(pc=78, stack=(), blockstack=(), npush=0)]
-2024-07-17 13:44:22,110 - DEBUG - pending: deque([State(pc_initial=40 nstack_initial=0), State(pc_initial=68 nstack_initial=0), State(pc_initial=78 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
-2024-07-17 13:44:22,110 - DEBUG - pending: deque([State(pc_initial=68 nstack_initial=0), State(pc_initial=78 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
-2024-07-17 13:44:22,110 - DEBUG - stack: []
-2024-07-17 13:44:22,110 - DEBUG - state.pc_initial: State(pc_initial=68 nstack_initial=0)
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=68, inst=JUMP_FORWARD(arg=4, lineno=1152)
-2024-07-17 13:44:22,110 - DEBUG - stack []
-2024-07-17 13:44:22,110 - DEBUG - end state. edges=[Edge(pc=74, stack=(), blockstack=(), npush=0)]
-2024-07-17 13:44:22,110 - DEBUG - pending: deque([State(pc_initial=78 nstack_initial=0), State(pc_initial=78 nstack_initial=0), State(pc_initial=74 nstack_initial=0)])
-2024-07-17 13:44:22,110 - DEBUG - stack: []
-2024-07-17 13:44:22,110 - DEBUG - state.pc_initial: State(pc_initial=78 nstack_initial=0)
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=78, inst=LOAD_FAST(arg=2, lineno=1155)
-2024-07-17 13:44:22,110 - DEBUG - stack []
-2024-07-17 13:44:22,110 - DEBUG - dispatch pc=80, inst=POP_JUMP_IF_FALSE(arg=102, lineno=1155)
-2024-07-17 13:44:22,110 - DEBUG - stack ['$zero_pos78.0']
-2024-07-17 13:44:22,110 - DEBUG - end state. edges=[Edge(pc=82, stack=(), blockstack=(), npush=0), Edge(pc=102, stack=(), blockstack=(), npush=0)]
-2024-07-17 13:44:22,110 - DEBUG - pending: deque([State(pc_initial=78 nstack_initial=0), State(pc_initial=74 nstack_initial=0), State(pc_initial=82 nstack_initial=0), State(pc_initial=102 nstack_initial=0)])
-2024-07-17 13:44:22,110 - DEBUG - pending: deque([State(pc_initial=74 nstack_initial=0), State(pc_initial=82 nstack_initial=0), State(pc_initial=102 nstack_initial=0)])
-2024-07-17 13:44:22,110 - DEBUG - stack: []
-2024-07-17 13:44:22,110 - DEBUG - state.pc_initial: State(pc_initial=74 nstack_initial=0)
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=74, inst=LOAD_CONST(arg=1, lineno=1153)
-2024-07-17 13:44:22,111 - DEBUG - stack []
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=76, inst=STORE_FAST(arg=4, lineno=1153)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$const74.0']
-2024-07-17 13:44:22,111 - DEBUG - end state. edges=[Edge(pc=78, stack=(), blockstack=(), npush=0)]
-2024-07-17 13:44:22,111 - DEBUG - pending: deque([State(pc_initial=82 nstack_initial=0), State(pc_initial=102 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
-2024-07-17 13:44:22,111 - DEBUG - stack: []
-2024-07-17 13:44:22,111 - DEBUG - state.pc_initial: State(pc_initial=82 nstack_initial=0)
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=82, inst=LOAD_GLOBAL(arg=0, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack []
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=84, inst=LOAD_METHOD(arg=1, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$82load_global.0']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=86, inst=LOAD_FAST(arg=3, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$84load_method.1']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=88, inst=CALL_METHOD(arg=1, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$84load_method.1', '$x086.2']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=90, inst=LOAD_GLOBAL(arg=0, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$88call_method.3']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=92, inst=LOAD_METHOD(arg=1, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$88call_method.3', '$90load_global.4']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=94, inst=LOAD_FAST(arg=4, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$88call_method.3', '$92load_method.5']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=96, inst=CALL_METHOD(arg=1, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$88call_method.3', '$92load_method.5', '$x194.6']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=98, inst=COMPARE_OP(arg=3, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$88call_method.3', '$96call_method.7']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=100, inst=RETURN_VALUE(arg=None, lineno=1156)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$98compare_op.8']
-2024-07-17 13:44:22,111 - DEBUG - end state. edges=[]
-2024-07-17 13:44:22,111 - DEBUG - pending: deque([State(pc_initial=102 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
-2024-07-17 13:44:22,111 - DEBUG - stack: []
-2024-07-17 13:44:22,111 - DEBUG - state.pc_initial: State(pc_initial=102 nstack_initial=0)
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=102, inst=LOAD_GLOBAL(arg=0, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack []
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=104, inst=LOAD_METHOD(arg=2, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$102load_global.0']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=106, inst=LOAD_FAST(arg=3, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$104load_method.1']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=108, inst=CALL_METHOD(arg=1, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$104load_method.1', '$x0106.2']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=110, inst=LOAD_GLOBAL(arg=0, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$108call_method.3']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=112, inst=LOAD_METHOD(arg=2, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$108call_method.3', '$110load_global.4']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=114, inst=LOAD_FAST(arg=4, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$108call_method.3', '$112load_method.5']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=116, inst=CALL_METHOD(arg=1, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$108call_method.3', '$112load_method.5', '$x1114.6']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=118, inst=COMPARE_OP(arg=3, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$108call_method.3', '$116call_method.7']
-2024-07-17 13:44:22,111 - DEBUG - dispatch pc=120, inst=RETURN_VALUE(arg=None, lineno=1158)
-2024-07-17 13:44:22,111 - DEBUG - stack ['$118compare_op.8']
-2024-07-17 13:44:22,111 - DEBUG - end state. edges=[]
-2024-07-17 13:44:22,111 - DEBUG - pending: deque([State(pc_initial=78 nstack_initial=0)])
-2024-07-17 13:44:22,111 - DEBUG - -------------------------Prune PHIs-------------------------
-2024-07-17 13:44:22,111 - DEBUG - Used_phis: defaultdict(<class 'set'>,
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=0 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: []
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=0 nstack_initial=0)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=0, inst=NOP(arg=None, lineno=1144)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=2, inst=LOAD_FAST(arg=0, lineno=1147)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=4, inst=LOAD_CONST(arg=1, lineno=1147)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$x2.0']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=6, inst=BINARY_SUBSCR(arg=None, lineno=1147)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$x2.0', '$const4.1']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=8, inst=STORE_FAST(arg=3, lineno=1147)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$6binary_subscr.2']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=10, inst=LOAD_FAST(arg=1, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=12, inst=UNARY_NEGATIVE(arg=None, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$threshold10.3']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=14, inst=LOAD_FAST(arg=3, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$12unary_negative.4']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=16, inst=DUP_TOP(arg=None, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$12unary_negative.4', '$x014.5']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=18, inst=ROT_THREE(arg=None, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$12unary_negative.4', '$x014.5', '$16dup_top.6']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=20, inst=COMPARE_OP(arg=1, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$16dup_top.6', '$12unary_negative.4', '$x014.5']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=22, inst=POP_JUMP_IF_FALSE(arg=32, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$16dup_top.6', '$20compare_op.7']
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=24, stack=('$16dup_top.6',), blockstack=(), npush=0), Edge(pc=32, stack=('$16dup_top.6',), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=24 nstack_initial=1), State(pc_initial=32 nstack_initial=1)])
+2024-07-17 16:14:20,253 - DEBUG - stack: ['$phi24.0']
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=24 nstack_initial=1)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=24, inst=LOAD_FAST(arg=1, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$phi24.0']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=26, inst=COMPARE_OP(arg=1, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$phi24.0', '$threshold24.1']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=28, inst=POP_JUMP_IF_FALSE(arg=40, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$26compare_op.2']
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=30, stack=(), blockstack=(), npush=0), Edge(pc=40, stack=(), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=32 nstack_initial=1), State(pc_initial=30 nstack_initial=0), State(pc_initial=40 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: ['$phi32.0']
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=32 nstack_initial=1)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=32, inst=POP_TOP(arg=None, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$phi32.0']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=34, inst=JUMP_FORWARD(arg=4, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=40, stack=(), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=30 nstack_initial=0), State(pc_initial=40 nstack_initial=0), State(pc_initial=40 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: []
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=30 nstack_initial=0)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=30, inst=JUMP_FORWARD(arg=4, lineno=1148)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=36, stack=(), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=40 nstack_initial=0), State(pc_initial=40 nstack_initial=0), State(pc_initial=36 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: []
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=40 nstack_initial=0)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=40, inst=LOAD_FAST(arg=0, lineno=1151)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=42, inst=LOAD_CONST(arg=2, lineno=1151)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$x40.0']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=44, inst=BINARY_SUBSCR(arg=None, lineno=1151)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$x40.0', '$const42.1']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=46, inst=STORE_FAST(arg=4, lineno=1151)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$44binary_subscr.2']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=48, inst=LOAD_FAST(arg=1, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=50, inst=UNARY_NEGATIVE(arg=None, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$threshold48.3']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=52, inst=LOAD_FAST(arg=4, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$50unary_negative.4']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=54, inst=DUP_TOP(arg=None, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$50unary_negative.4', '$x152.5']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=56, inst=ROT_THREE(arg=None, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$50unary_negative.4', '$x152.5', '$54dup_top.6']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=58, inst=COMPARE_OP(arg=1, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$54dup_top.6', '$50unary_negative.4', '$x152.5']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=60, inst=POP_JUMP_IF_FALSE(arg=70, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$54dup_top.6', '$58compare_op.7']
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=62, stack=('$54dup_top.6',), blockstack=(), npush=0), Edge(pc=70, stack=('$54dup_top.6',), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=40 nstack_initial=0), State(pc_initial=36 nstack_initial=0), State(pc_initial=62 nstack_initial=1), State(pc_initial=70 nstack_initial=1)])
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=36 nstack_initial=0), State(pc_initial=62 nstack_initial=1), State(pc_initial=70 nstack_initial=1)])
+2024-07-17 16:14:20,253 - DEBUG - stack: []
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=36 nstack_initial=0)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=36, inst=LOAD_CONST(arg=1, lineno=1149)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=38, inst=STORE_FAST(arg=3, lineno=1149)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$const36.0']
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=40, stack=(), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=62 nstack_initial=1), State(pc_initial=70 nstack_initial=1), State(pc_initial=40 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: ['$phi62.0']
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=62 nstack_initial=1)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=62, inst=LOAD_FAST(arg=1, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$phi62.0']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=64, inst=COMPARE_OP(arg=1, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$phi62.0', '$threshold62.1']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=66, inst=POP_JUMP_IF_FALSE(arg=78, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$64compare_op.2']
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=68, stack=(), blockstack=(), npush=0), Edge(pc=78, stack=(), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=70 nstack_initial=1), State(pc_initial=40 nstack_initial=0), State(pc_initial=68 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: ['$phi70.0']
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=70 nstack_initial=1)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=70, inst=POP_TOP(arg=None, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$phi70.0']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=72, inst=JUMP_FORWARD(arg=4, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=78, stack=(), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=40 nstack_initial=0), State(pc_initial=68 nstack_initial=0), State(pc_initial=78 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=68 nstack_initial=0), State(pc_initial=78 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: []
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=68 nstack_initial=0)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=68, inst=JUMP_FORWARD(arg=4, lineno=1152)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=74, stack=(), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=78 nstack_initial=0), State(pc_initial=78 nstack_initial=0), State(pc_initial=74 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: []
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=78 nstack_initial=0)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=78, inst=LOAD_FAST(arg=2, lineno=1155)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=80, inst=POP_JUMP_IF_FALSE(arg=102, lineno=1155)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$zero_pos78.0']
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=82, stack=(), blockstack=(), npush=0), Edge(pc=102, stack=(), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=78 nstack_initial=0), State(pc_initial=74 nstack_initial=0), State(pc_initial=82 nstack_initial=0), State(pc_initial=102 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=74 nstack_initial=0), State(pc_initial=82 nstack_initial=0), State(pc_initial=102 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: []
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=74 nstack_initial=0)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=74, inst=LOAD_CONST(arg=1, lineno=1153)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=76, inst=STORE_FAST(arg=4, lineno=1153)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$const74.0']
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[Edge(pc=78, stack=(), blockstack=(), npush=0)]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=82 nstack_initial=0), State(pc_initial=102 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: []
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=82 nstack_initial=0)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=82, inst=LOAD_GLOBAL(arg=0, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=84, inst=LOAD_METHOD(arg=1, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$82load_global.0']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=86, inst=LOAD_FAST(arg=3, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$84load_method.1']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=88, inst=CALL_METHOD(arg=1, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$84load_method.1', '$x086.2']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=90, inst=LOAD_GLOBAL(arg=0, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$88call_method.3']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=92, inst=LOAD_METHOD(arg=1, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$88call_method.3', '$90load_global.4']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=94, inst=LOAD_FAST(arg=4, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$88call_method.3', '$92load_method.5']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=96, inst=CALL_METHOD(arg=1, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$88call_method.3', '$92load_method.5', '$x194.6']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=98, inst=COMPARE_OP(arg=3, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$88call_method.3', '$96call_method.7']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=100, inst=RETURN_VALUE(arg=None, lineno=1156)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$98compare_op.8']
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=102 nstack_initial=0), State(pc_initial=78 nstack_initial=0)])
+2024-07-17 16:14:20,253 - DEBUG - stack: []
+2024-07-17 16:14:20,253 - DEBUG - state.pc_initial: State(pc_initial=102 nstack_initial=0)
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=102, inst=LOAD_GLOBAL(arg=0, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack []
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=104, inst=LOAD_METHOD(arg=2, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$102load_global.0']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=106, inst=LOAD_FAST(arg=3, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$104load_method.1']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=108, inst=CALL_METHOD(arg=1, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$104load_method.1', '$x0106.2']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=110, inst=LOAD_GLOBAL(arg=0, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$108call_method.3']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=112, inst=LOAD_METHOD(arg=2, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$108call_method.3', '$110load_global.4']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=114, inst=LOAD_FAST(arg=4, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$108call_method.3', '$112load_method.5']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=116, inst=CALL_METHOD(arg=1, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$108call_method.3', '$112load_method.5', '$x1114.6']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=118, inst=COMPARE_OP(arg=3, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$108call_method.3', '$116call_method.7']
+2024-07-17 16:14:20,253 - DEBUG - dispatch pc=120, inst=RETURN_VALUE(arg=None, lineno=1158)
+2024-07-17 16:14:20,253 - DEBUG - stack ['$118compare_op.8']
+2024-07-17 16:14:20,253 - DEBUG - end state. edges=[]
+2024-07-17 16:14:20,253 - DEBUG - pending: deque([State(pc_initial=78 nstack_initial=0)])
+2024-07-17 16:14:20,268 - DEBUG - -------------------------Prune PHIs-------------------------
+2024-07-17 16:14:20,268 - DEBUG - Used_phis: defaultdict(<class 'set'>,
             {State(pc_initial=0 nstack_initial=0): set(),
              State(pc_initial=24 nstack_initial=1): {'$phi24.0'},
              State(pc_initial=30 nstack_initial=0): set(),
@@ -279,11 +279,11 @@
              State(pc_initial=78 nstack_initial=0): set(),
              State(pc_initial=82 nstack_initial=0): set(),
              State(pc_initial=102 nstack_initial=0): set()})
-2024-07-17 13:44:22,112 - DEBUG - defmap: {'$phi24.0': State(pc_initial=0 nstack_initial=0),
+2024-07-17 16:14:20,268 - DEBUG - defmap: {'$phi24.0': State(pc_initial=0 nstack_initial=0),
  '$phi32.0': State(pc_initial=0 nstack_initial=0),
  '$phi62.0': State(pc_initial=40 nstack_initial=0),
  '$phi70.0': State(pc_initial=40 nstack_initial=0)}
-2024-07-17 13:44:22,112 - DEBUG - phismap: defaultdict(<class 'set'>,
+2024-07-17 16:14:20,268 - DEBUG - phismap: defaultdict(<class 'set'>,
             {'$phi24.0': {('$16dup_top.6',
                            State(pc_initial=0 nstack_initial=0))},
              '$phi32.0': {('$16dup_top.6',
@@ -292,7 +292,7 @@
                            State(pc_initial=40 nstack_initial=0))},
              '$phi70.0': {('$54dup_top.6',
                            State(pc_initial=40 nstack_initial=0))}})
-2024-07-17 13:44:22,112 - DEBUG - changing phismap: defaultdict(<class 'set'>,
+2024-07-17 16:14:20,268 - DEBUG - changing phismap: defaultdict(<class 'set'>,
             {'$phi24.0': {('$16dup_top.6',
                            State(pc_initial=0 nstack_initial=0))},
              '$phi32.0': {('$16dup_top.6',
@@ -301,39 +301,39 @@
                            State(pc_initial=40 nstack_initial=0))},
              '$phi70.0': {('$54dup_top.6',
                            State(pc_initial=40 nstack_initial=0))}})
-2024-07-17 13:44:22,112 - DEBUG - keep phismap: {'$phi24.0': {('$16dup_top.6', State(pc_initial=0 nstack_initial=0))},
+2024-07-17 16:14:20,268 - DEBUG - keep phismap: {'$phi24.0': {('$16dup_top.6', State(pc_initial=0 nstack_initial=0))},
  '$phi62.0': {('$54dup_top.6', State(pc_initial=40 nstack_initial=0))}}
-2024-07-17 13:44:22,112 - DEBUG - new_out: defaultdict(<class 'dict'>,
+2024-07-17 16:14:20,268 - DEBUG - new_out: defaultdict(<class 'dict'>,
             {State(pc_initial=0 nstack_initial=0): {'$phi24.0': '$16dup_top.6'},
              State(pc_initial=40 nstack_initial=0): {'$phi62.0': '$54dup_top.6'}})
-2024-07-17 13:44:22,112 - DEBUG - ----------------------DONE Prune PHIs-----------------------
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=0 nstack_initial=0):
+2024-07-17 16:14:20,268 - DEBUG - ----------------------DONE Prune PHIs-----------------------
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=0 nstack_initial=0):
 AdaptBlockInfo(insts=((0, {}), (2, {'res': '$x2.0'}), (4, {'res': '$const4.1'}), (6, {'index': '$const4.1', 'target': '$x2.0', 'res': '$6binary_subscr.2'}), (8, {'value': '$6binary_subscr.2'}), (10, {'res': '$threshold10.3'}), (12, {'value': '$threshold10.3', 'res': '$12unary_negative.4'}), (14, {'res': '$x014.5'}), (16, {'orig': ['$x014.5'], 'duped': ['$16dup_top.6']}), (20, {'lhs': '$12unary_negative.4', 'rhs': '$x014.5', 'res': '$20compare_op.7'}), (22, {'pred': '$20compare_op.7'})), outgoing_phis={'$phi24.0': '$16dup_top.6'}, blockstack=(), active_try_block=None, outgoing_edgepushed={24: ('$16dup_top.6',), 32: ('$16dup_top.6',)})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=24 nstack_initial=1):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=24 nstack_initial=1):
 AdaptBlockInfo(insts=((24, {'res': '$threshold24.1'}), (26, {'lhs': '$phi24.0', 'rhs': '$threshold24.1', 'res': '$26compare_op.2'}), (28, {'pred': '$26compare_op.2'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={30: (), 40: ()})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=30 nstack_initial=0):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=30 nstack_initial=0):
 AdaptBlockInfo(insts=((30, {}),), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={36: ()})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=32 nstack_initial=1):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=32 nstack_initial=1):
 AdaptBlockInfo(insts=((34, {}),), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={40: ()})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=36 nstack_initial=0):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=36 nstack_initial=0):
 AdaptBlockInfo(insts=((36, {'res': '$const36.0'}), (38, {'value': '$const36.0'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={40: ()})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=40 nstack_initial=0):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=40 nstack_initial=0):
 AdaptBlockInfo(insts=((40, {'res': '$x40.0'}), (42, {'res': '$const42.1'}), (44, {'index': '$const42.1', 'target': '$x40.0', 'res': '$44binary_subscr.2'}), (46, {'value': '$44binary_subscr.2'}), (48, {'res': '$threshold48.3'}), (50, {'value': '$threshold48.3', 'res': '$50unary_negative.4'}), (52, {'res': '$x152.5'}), (54, {'orig': ['$x152.5'], 'duped': ['$54dup_top.6']}), (58, {'lhs': '$50unary_negative.4', 'rhs': '$x152.5', 'res': '$58compare_op.7'}), (60, {'pred': '$58compare_op.7'})), outgoing_phis={'$phi62.0': '$54dup_top.6'}, blockstack=(), active_try_block=None, outgoing_edgepushed={62: ('$54dup_top.6',), 70: ('$54dup_top.6',)})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=62 nstack_initial=1):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=62 nstack_initial=1):
 AdaptBlockInfo(insts=((62, {'res': '$threshold62.1'}), (64, {'lhs': '$phi62.0', 'rhs': '$threshold62.1', 'res': '$64compare_op.2'}), (66, {'pred': '$64compare_op.2'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={68: (), 78: ()})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=68 nstack_initial=0):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=68 nstack_initial=0):
 AdaptBlockInfo(insts=((68, {}),), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={74: ()})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=70 nstack_initial=1):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=70 nstack_initial=1):
 AdaptBlockInfo(insts=((72, {}),), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={78: ()})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=74 nstack_initial=0):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=74 nstack_initial=0):
 AdaptBlockInfo(insts=((74, {'res': '$const74.0'}), (76, {'value': '$const74.0'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={78: ()})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=78 nstack_initial=0):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=78 nstack_initial=0):
 AdaptBlockInfo(insts=((78, {'res': '$zero_pos78.0'}), (80, {'pred': '$zero_pos78.0'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={82: (), 102: ()})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=82 nstack_initial=0):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=82 nstack_initial=0):
 AdaptBlockInfo(insts=((82, {'res': '$82load_global.0'}), (84, {'item': '$82load_global.0', 'res': '$84load_method.1'}), (86, {'res': '$x086.2'}), (88, {'func': '$84load_method.1', 'args': ['$x086.2'], 'res': '$88call_method.3'}), (90, {'res': '$90load_global.4'}), (92, {'item': '$90load_global.4', 'res': '$92load_method.5'}), (94, {'res': '$x194.6'}), (96, {'func': '$92load_method.5', 'args': ['$x194.6'], 'res': '$96call_method.7'}), (98, {'lhs': '$88call_method.3', 'rhs': '$96call_method.7', 'res': '$98compare_op.8'}), (100, {'retval': '$98compare_op.8', 'castval': '$100return_value.9'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={})
-2024-07-17 13:44:22,112 - DEBUG - block_infos State(pc_initial=102 nstack_initial=0):
+2024-07-17 16:14:20,268 - DEBUG - block_infos State(pc_initial=102 nstack_initial=0):
 AdaptBlockInfo(insts=((102, {'res': '$102load_global.0'}), (104, {'item': '$102load_global.0', 'res': '$104load_method.1'}), (106, {'res': '$x0106.2'}), (108, {'func': '$104load_method.1', 'args': ['$x0106.2'], 'res': '$108call_method.3'}), (110, {'res': '$110load_global.4'}), (112, {'item': '$110load_global.4', 'res': '$112load_method.5'}), (114, {'res': '$x1114.6'}), (116, {'func': '$112load_method.5', 'args': ['$x1114.6'], 'res': '$116call_method.7'}), (118, {'lhs': '$108call_method.3', 'rhs': '$116call_method.7', 'res': '$118compare_op.8'}), (120, {'retval': '$118compare_op.8', 'castval': '$120return_value.9'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={})
-2024-07-17 13:44:22,113 - DEBUG - label 0:
+2024-07-17 16:14:20,268 - DEBUG - label 0:
     x = arg(0, name=x)                       ['x']
     threshold = arg(1, name=threshold)       ['threshold']
     zero_pos = arg(2, name=zero_pos)         ['zero_pos']
@@ -403,7 +403,7 @@ label 102:
     $120return_value.9 = cast(value=$118compare_op.8) ['$118compare_op.8', '$120return_value.9']
     return $120return_value.9                ['$120return_value.9']
 
-2024-07-17 13:44:22,262 - DEBUG - bytecode dump:
+2024-07-17 16:14:20,410 - DEBUG - bytecode dump:
 >          0	NOP(arg=None, lineno=1051)
            2	LOAD_FAST(arg=0, lineno=1054)
            4	LOAD_CONST(arg=1, lineno=1054)
@@ -421,55 +421,55 @@ label 102:
           28	COMPARE_OP(arg=5, lineno=1054)
           30	BINARY_AND(arg=None, lineno=1054)
           32	RETURN_VALUE(arg=None, lineno=1054)
-2024-07-17 13:44:22,262 - DEBUG - pending: deque([State(pc_initial=0 nstack_initial=0)])
-2024-07-17 13:44:22,262 - DEBUG - stack: []
-2024-07-17 13:44:22,262 - DEBUG - state.pc_initial: State(pc_initial=0 nstack_initial=0)
-2024-07-17 13:44:22,262 - DEBUG - dispatch pc=0, inst=NOP(arg=None, lineno=1051)
-2024-07-17 13:44:22,262 - DEBUG - stack []
-2024-07-17 13:44:22,262 - DEBUG - dispatch pc=2, inst=LOAD_FAST(arg=0, lineno=1054)
-2024-07-17 13:44:22,262 - DEBUG - stack []
-2024-07-17 13:44:22,262 - DEBUG - dispatch pc=4, inst=LOAD_CONST(arg=1, lineno=1054)
-2024-07-17 13:44:22,262 - DEBUG - stack ['$x2.0']
-2024-07-17 13:44:22,262 - DEBUG - dispatch pc=6, inst=BINARY_SUBSCR(arg=None, lineno=1054)
-2024-07-17 13:44:22,262 - DEBUG - stack ['$x2.0', '$const4.1']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=8, inst=LOAD_FAST(arg=0, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$6binary_subscr.2']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=10, inst=LOAD_CONST(arg=2, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$6binary_subscr.2', '$x8.3']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=12, inst=BINARY_SUBSCR(arg=None, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$6binary_subscr.2', '$x8.3', '$const10.4']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=14, inst=COMPARE_OP(arg=4, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$6binary_subscr.2', '$12binary_subscr.5']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=16, inst=LOAD_FAST(arg=0, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$14compare_op.6']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=18, inst=LOAD_CONST(arg=1, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$14compare_op.6', '$x16.7']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=20, inst=BINARY_SUBSCR(arg=None, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$14compare_op.6', '$x16.7', '$const18.8']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=22, inst=LOAD_FAST(arg=0, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=24, inst=LOAD_CONST(arg=3, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=26, inst=BINARY_SUBSCR(arg=None, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10', '$const24.11']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=28, inst=COMPARE_OP(arg=5, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$26binary_subscr.12']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=30, inst=BINARY_AND(arg=None, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$14compare_op.6', '$28compare_op.13']
-2024-07-17 13:44:22,263 - DEBUG - dispatch pc=32, inst=RETURN_VALUE(arg=None, lineno=1054)
-2024-07-17 13:44:22,263 - DEBUG - stack ['$30binary_and.14']
-2024-07-17 13:44:22,263 - DEBUG - end state. edges=[]
-2024-07-17 13:44:22,263 - DEBUG - -------------------------Prune PHIs-------------------------
-2024-07-17 13:44:22,263 - DEBUG - Used_phis: defaultdict(<class 'set'>, {State(pc_initial=0 nstack_initial=0): set()})
-2024-07-17 13:44:22,263 - DEBUG - defmap: {}
-2024-07-17 13:44:22,263 - DEBUG - phismap: defaultdict(<class 'set'>, {})
-2024-07-17 13:44:22,263 - DEBUG - changing phismap: defaultdict(<class 'set'>, {})
-2024-07-17 13:44:22,263 - DEBUG - keep phismap: {}
-2024-07-17 13:44:22,263 - DEBUG - new_out: defaultdict(<class 'dict'>, {})
-2024-07-17 13:44:22,263 - DEBUG - ----------------------DONE Prune PHIs-----------------------
-2024-07-17 13:44:22,263 - DEBUG - block_infos State(pc_initial=0 nstack_initial=0):
+2024-07-17 16:14:20,410 - DEBUG - pending: deque([State(pc_initial=0 nstack_initial=0)])
+2024-07-17 16:14:20,410 - DEBUG - stack: []
+2024-07-17 16:14:20,410 - DEBUG - state.pc_initial: State(pc_initial=0 nstack_initial=0)
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=0, inst=NOP(arg=None, lineno=1051)
+2024-07-17 16:14:20,410 - DEBUG - stack []
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=2, inst=LOAD_FAST(arg=0, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack []
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=4, inst=LOAD_CONST(arg=1, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$x2.0']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=6, inst=BINARY_SUBSCR(arg=None, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$x2.0', '$const4.1']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=8, inst=LOAD_FAST(arg=0, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$6binary_subscr.2']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=10, inst=LOAD_CONST(arg=2, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$6binary_subscr.2', '$x8.3']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=12, inst=BINARY_SUBSCR(arg=None, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$6binary_subscr.2', '$x8.3', '$const10.4']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=14, inst=COMPARE_OP(arg=4, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$6binary_subscr.2', '$12binary_subscr.5']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=16, inst=LOAD_FAST(arg=0, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=18, inst=LOAD_CONST(arg=1, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$x16.7']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=20, inst=BINARY_SUBSCR(arg=None, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$x16.7', '$const18.8']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=22, inst=LOAD_FAST(arg=0, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=24, inst=LOAD_CONST(arg=3, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=26, inst=BINARY_SUBSCR(arg=None, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10', '$const24.11']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=28, inst=COMPARE_OP(arg=5, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$26binary_subscr.12']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=30, inst=BINARY_AND(arg=None, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$28compare_op.13']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=32, inst=RETURN_VALUE(arg=None, lineno=1054)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$30binary_and.14']
+2024-07-17 16:14:20,410 - DEBUG - end state. edges=[]
+2024-07-17 16:14:20,410 - DEBUG - -------------------------Prune PHIs-------------------------
+2024-07-17 16:14:20,410 - DEBUG - Used_phis: defaultdict(<class 'set'>, {State(pc_initial=0 nstack_initial=0): set()})
+2024-07-17 16:14:20,410 - DEBUG - defmap: {}
+2024-07-17 16:14:20,410 - DEBUG - phismap: defaultdict(<class 'set'>, {})
+2024-07-17 16:14:20,410 - DEBUG - changing phismap: defaultdict(<class 'set'>, {})
+2024-07-17 16:14:20,410 - DEBUG - keep phismap: {}
+2024-07-17 16:14:20,410 - DEBUG - new_out: defaultdict(<class 'dict'>, {})
+2024-07-17 16:14:20,410 - DEBUG - ----------------------DONE Prune PHIs-----------------------
+2024-07-17 16:14:20,410 - DEBUG - block_infos State(pc_initial=0 nstack_initial=0):
 AdaptBlockInfo(insts=((0, {}), (2, {'res': '$x2.0'}), (4, {'res': '$const4.1'}), (6, {'index': '$const4.1', 'target': '$x2.0', 'res': '$6binary_subscr.2'}), (8, {'res': '$x8.3'}), (10, {'res': '$const10.4'}), (12, {'index': '$const10.4', 'target': '$x8.3', 'res': '$12binary_subscr.5'}), (14, {'lhs': '$6binary_subscr.2', 'rhs': '$12binary_subscr.5', 'res': '$14compare_op.6'}), (16, {'res': '$x16.7'}), (18, {'res': '$const18.8'}), (20, {'index': '$const18.8', 'target': '$x16.7', 'res': '$20binary_subscr.9'}), (22, {'res': '$x22.10'}), (24, {'res': '$const24.11'}), (26, {'index': '$const24.11', 'target': '$x22.10', 'res': '$26binary_subscr.12'}), (28, {'lhs': '$20binary_subscr.9', 'rhs': '$26binary_subscr.12', 'res': '$28compare_op.13'}), (30, {'lhs': '$14compare_op.6', 'rhs': '$28compare_op.13', 'res': '$30binary_and.14'}), (32, {'retval': '$30binary_and.14', 'castval': '$32return_value.15'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={})
-2024-07-17 13:44:22,263 - DEBUG - label 0:
+2024-07-17 16:14:20,410 - DEBUG - label 0:
     x = arg(0, name=x)                       ['x']
     $const4.1 = const(int, 0)                ['$const4.1']
     $6binary_subscr.2 = getitem(value=x, index=$const4.1, fn=<built-in function getitem>) ['$6binary_subscr.2', '$const4.1', 'x']
@@ -485,7 +485,7 @@ AdaptBlockInfo(insts=((0, {}), (2, {'res': '$x2.0'}), (4, {'res': '$const4.1'}),
     $32return_value.15 = cast(value=$30binary_and.14) ['$30binary_and.14', '$32return_value.15']
     return $32return_value.15                ['$32return_value.15']
 
-2024-07-17 13:44:22,264 - DEBUG - bytecode dump:
+2024-07-17 16:14:20,410 - DEBUG - bytecode dump:
 >          0	NOP(arg=None, lineno=1057)
            2	LOAD_FAST(arg=0, lineno=1060)
            4	LOAD_CONST(arg=1, lineno=1060)
@@ -503,55 +503,55 @@ AdaptBlockInfo(insts=((0, {}), (2, {'res': '$x2.0'}), (4, {'res': '$const4.1'}),
           28	COMPARE_OP(arg=1, lineno=1060)
           30	BINARY_AND(arg=None, lineno=1060)
           32	RETURN_VALUE(arg=None, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - pending: deque([State(pc_initial=0 nstack_initial=0)])
-2024-07-17 13:44:22,264 - DEBUG - stack: []
-2024-07-17 13:44:22,264 - DEBUG - state.pc_initial: State(pc_initial=0 nstack_initial=0)
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=0, inst=NOP(arg=None, lineno=1057)
-2024-07-17 13:44:22,264 - DEBUG - stack []
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=2, inst=LOAD_FAST(arg=0, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack []
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=4, inst=LOAD_CONST(arg=1, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$x2.0']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=6, inst=BINARY_SUBSCR(arg=None, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$x2.0', '$const4.1']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=8, inst=LOAD_FAST(arg=0, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$6binary_subscr.2']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=10, inst=LOAD_CONST(arg=2, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$6binary_subscr.2', '$x8.3']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=12, inst=BINARY_SUBSCR(arg=None, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$6binary_subscr.2', '$x8.3', '$const10.4']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=14, inst=COMPARE_OP(arg=0, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$6binary_subscr.2', '$12binary_subscr.5']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=16, inst=LOAD_FAST(arg=0, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$14compare_op.6']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=18, inst=LOAD_CONST(arg=1, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$14compare_op.6', '$x16.7']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=20, inst=BINARY_SUBSCR(arg=None, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$14compare_op.6', '$x16.7', '$const18.8']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=22, inst=LOAD_FAST(arg=0, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=24, inst=LOAD_CONST(arg=3, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=26, inst=BINARY_SUBSCR(arg=None, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10', '$const24.11']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=28, inst=COMPARE_OP(arg=1, lineno=1060)
-2024-07-17 13:44:22,264 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$26binary_subscr.12']
-2024-07-17 13:44:22,264 - DEBUG - dispatch pc=30, inst=BINARY_AND(arg=None, lineno=1060)
-2024-07-17 13:44:22,265 - DEBUG - stack ['$14compare_op.6', '$28compare_op.13']
-2024-07-17 13:44:22,265 - DEBUG - dispatch pc=32, inst=RETURN_VALUE(arg=None, lineno=1060)
-2024-07-17 13:44:22,265 - DEBUG - stack ['$30binary_and.14']
-2024-07-17 13:44:22,265 - DEBUG - end state. edges=[]
-2024-07-17 13:44:22,265 - DEBUG - -------------------------Prune PHIs-------------------------
-2024-07-17 13:44:22,265 - DEBUG - Used_phis: defaultdict(<class 'set'>, {State(pc_initial=0 nstack_initial=0): set()})
-2024-07-17 13:44:22,265 - DEBUG - defmap: {}
-2024-07-17 13:44:22,265 - DEBUG - phismap: defaultdict(<class 'set'>, {})
-2024-07-17 13:44:22,265 - DEBUG - changing phismap: defaultdict(<class 'set'>, {})
-2024-07-17 13:44:22,265 - DEBUG - keep phismap: {}
-2024-07-17 13:44:22,265 - DEBUG - new_out: defaultdict(<class 'dict'>, {})
-2024-07-17 13:44:22,265 - DEBUG - ----------------------DONE Prune PHIs-----------------------
-2024-07-17 13:44:22,265 - DEBUG - block_infos State(pc_initial=0 nstack_initial=0):
+2024-07-17 16:14:20,410 - DEBUG - pending: deque([State(pc_initial=0 nstack_initial=0)])
+2024-07-17 16:14:20,410 - DEBUG - stack: []
+2024-07-17 16:14:20,410 - DEBUG - state.pc_initial: State(pc_initial=0 nstack_initial=0)
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=0, inst=NOP(arg=None, lineno=1057)
+2024-07-17 16:14:20,410 - DEBUG - stack []
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=2, inst=LOAD_FAST(arg=0, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack []
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=4, inst=LOAD_CONST(arg=1, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$x2.0']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=6, inst=BINARY_SUBSCR(arg=None, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$x2.0', '$const4.1']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=8, inst=LOAD_FAST(arg=0, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$6binary_subscr.2']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=10, inst=LOAD_CONST(arg=2, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$6binary_subscr.2', '$x8.3']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=12, inst=BINARY_SUBSCR(arg=None, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$6binary_subscr.2', '$x8.3', '$const10.4']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=14, inst=COMPARE_OP(arg=0, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$6binary_subscr.2', '$12binary_subscr.5']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=16, inst=LOAD_FAST(arg=0, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=18, inst=LOAD_CONST(arg=1, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$x16.7']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=20, inst=BINARY_SUBSCR(arg=None, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$x16.7', '$const18.8']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=22, inst=LOAD_FAST(arg=0, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=24, inst=LOAD_CONST(arg=3, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=26, inst=BINARY_SUBSCR(arg=None, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10', '$const24.11']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=28, inst=COMPARE_OP(arg=1, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$20binary_subscr.9', '$26binary_subscr.12']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=30, inst=BINARY_AND(arg=None, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$14compare_op.6', '$28compare_op.13']
+2024-07-17 16:14:20,410 - DEBUG - dispatch pc=32, inst=RETURN_VALUE(arg=None, lineno=1060)
+2024-07-17 16:14:20,410 - DEBUG - stack ['$30binary_and.14']
+2024-07-17 16:14:20,410 - DEBUG - end state. edges=[]
+2024-07-17 16:14:20,410 - DEBUG - -------------------------Prune PHIs-------------------------
+2024-07-17 16:14:20,410 - DEBUG - Used_phis: defaultdict(<class 'set'>, {State(pc_initial=0 nstack_initial=0): set()})
+2024-07-17 16:14:20,410 - DEBUG - defmap: {}
+2024-07-17 16:14:20,410 - DEBUG - phismap: defaultdict(<class 'set'>, {})
+2024-07-17 16:14:20,410 - DEBUG - changing phismap: defaultdict(<class 'set'>, {})
+2024-07-17 16:14:20,410 - DEBUG - keep phismap: {}
+2024-07-17 16:14:20,410 - DEBUG - new_out: defaultdict(<class 'dict'>, {})
+2024-07-17 16:14:20,410 - DEBUG - ----------------------DONE Prune PHIs-----------------------
+2024-07-17 16:14:20,410 - DEBUG - block_infos State(pc_initial=0 nstack_initial=0):
 AdaptBlockInfo(insts=((0, {}), (2, {'res': '$x2.0'}), (4, {'res': '$const4.1'}), (6, {'index': '$const4.1', 'target': '$x2.0', 'res': '$6binary_subscr.2'}), (8, {'res': '$x8.3'}), (10, {'res': '$const10.4'}), (12, {'index': '$const10.4', 'target': '$x8.3', 'res': '$12binary_subscr.5'}), (14, {'lhs': '$6binary_subscr.2', 'rhs': '$12binary_subscr.5', 'res': '$14compare_op.6'}), (16, {'res': '$x16.7'}), (18, {'res': '$const18.8'}), (20, {'index': '$const18.8', 'target': '$x16.7', 'res': '$20binary_subscr.9'}), (22, {'res': '$x22.10'}), (24, {'res': '$const24.11'}), (26, {'index': '$const24.11', 'target': '$x22.10', 'res': '$26binary_subscr.12'}), (28, {'lhs': '$20binary_subscr.9', 'rhs': '$26binary_subscr.12', 'res': '$28compare_op.13'}), (30, {'lhs': '$14compare_op.6', 'rhs': '$28compare_op.13', 'res': '$30binary_and.14'}), (32, {'retval': '$30binary_and.14', 'castval': '$32return_value.15'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={})
-2024-07-17 13:44:22,265 - DEBUG - label 0:
+2024-07-17 16:14:20,410 - DEBUG - label 0:
     x = arg(0, name=x)                       ['x']
     $const4.1 = const(int, 0)                ['$const4.1']
     $6binary_subscr.2 = getitem(value=x, index=$const4.1, fn=<built-in function getitem>) ['$6binary_subscr.2', '$const4.1', 'x']
@@ -567,3 +567,5 @@ AdaptBlockInfo(insts=((0, {}), (2, {'res': '$x2.0'}), (4, {'res': '$const4.1'}),
     $32return_value.15 = cast(value=$30binary_and.14) ['$30binary_and.14', '$32return_value.15']
     return $32return_value.15                ['$32return_value.15']
 
+2024-07-17 16:14:30,184 - DEBUG - Starting new HTTP connection (1): localhost:1234
+2024-07-17 16:14:30,184 - DEBUG - http://localhost:1234 "POST /v1/chat/completions HTTP/11" 200 None
