@@ -3,13 +3,16 @@ import torch
 import argparse
 import pyaudio
 import wave
-from zipfile import ZipFile
 from api import BaseSpeakerTTS, ToneColorConverter
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 from sentence_transformers import SentenceTransformer, util
 import logging
 import soundfile as sf
 from pydub import AudioSegment
+import requests
+from OpenVoice.openvoice.se_extractor import get_se
+from openai import OpenAI
+import json 
 
 # Set up logging configuration
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s', filename='voice_assistant.log', filemode='w')
@@ -21,7 +24,7 @@ YELLOW = '\033[93m'
 NEON_GREEN = '\033[92m'
 RESET_COLOR = '\033[0m'
 
-# Set up the distil-whisper model for STT
+# Set up the whisper model for STT
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
 model_id = "openai/whisper-large-v3"
@@ -52,7 +55,7 @@ def open_file(filepath):
         return infile.read()
 
 # Initialize the OpenAI client with the API key
-client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
+client = OpenAI(base_url="http://localhost:1234/v1", api_key="YOUR_API_KEY")
 
 # Function to play audio using PyAudio
 def play_audio(file_path):
@@ -103,7 +106,7 @@ def process_and_play(prompt, style, audio_file_pth):
         logging.info("Starting text-to-speech synthesis.")
         tts_model = en_base_speaker_tts
         source_se = en_source_default_se if style == 'default' else en_source_style_se
-        target_se, audio_name = se_extractor.get_se(audio_file_pth, tone_color_converter, target_dir='processed', vad=True)
+        target_se, audio_name = get_se(audio_file_pth, tone_color_converter, target_dir='processed')
         src_path = f'{output_dir}/tmp.wav'
         tts_model.tts(prompt, src_path, speaker=style, language='English')
         save_path = f'{output_dir}/output.wav'
@@ -129,36 +132,52 @@ def get_relevant_context(user_input, vault_embeddings, vault_content, model, top
         logging.error(f"Error retrieving relevant context: {e}")
         return []
 
+import json
+import requests
+import logging
+
 def chatgpt_streamed(user_input, system_message, conversation_history, bot_name, vault_embeddings, vault_content, model):
     try:
         logging.info("Starting interaction with local LLM.")
         relevant_context = get_relevant_context(user_input, vault_embeddings, vault_content, model)
         user_input_with_context = "\n".join(relevant_context) + "\n\n" + user_input if relevant_context else user_input
         messages = [{"role": "system", "content": system_message}] + conversation_history + [{"role": "user", "content": user_input_with_context}]
-        temperature = 1
-        streamed_completion = client.chat.completions.create(model="local-model", messages=messages, stream=True)
-        full_response = ""
-        line_buffer = ""
-        for chunk in streamed_completion:
-            delta_content = chunk.choices[0].delta.content
-            if delta_content is not None:
-                line_buffer += delta_content
-                if '\n' in line_buffer:
-                    lines = line_buffer.split('\n')
-                    for line in lines[:-1]:
-                        print(NEON_GREEN + line + RESET_COLOR)
-                        full_response += line + '\n'
-                    line_buffer = lines[-1]
-        if line_buffer:
-            print(NEON_GREEN + line_buffer + RESET_COLOR)
-            full_response += line_buffer
+        
+        payload = {
+            "model": "cognitivecomputations/dolphin-2.9-llama3-8b-gguf",
+            "messages": messages,
+            "temperature": 1,
+            "stream": True
+        }
+
+        with requests.post("http://localhost:1234/v1/chat/completions", json=payload, stream=True) as response:
+            response.raise_for_status()
+            full_response = ""
+            for line in response.iter_lines():
+                if line:
+                    line = line.decode('utf-8')
+                    if line.startswith('data: '):
+                        line = line[6:]
+                        if line.strip() == '[DONE]':
+                            break
+                        try:
+                            chunk_data = json.loads(line)
+                            if "choices" in chunk_data:
+                                delta_content = chunk_data["choices"][0]["delta"].get("content", "")
+                                if delta_content:
+                                    print(NEON_GREEN + delta_content + RESET_COLOR, end='', flush=True)
+                                    full_response += delta_content
+                        except json.JSONDecodeError:
+                            logging.warning(f"Failed to decode JSON: {line}")
+
+        print()  # New line after streaming response
         logging.info(f"Generated response: {full_response}")
         return full_response
     except Exception as e:
-        logging.error(f"Error during LLM interaction: {e}")
+        logging.error(f"Error during LLM interaction: {str(e)}")
         return "Sorry, I encountered an error while processing your request."
 
-# Function to transcribe the recorded audio using distil-whisper
+# Function to transcribe the recorded audio using whisper
 def transcribe_with_whisper(audio_file):
     try:
         logging.info("Starting transcription with Whisper model.")

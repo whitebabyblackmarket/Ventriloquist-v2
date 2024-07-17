@@ -1,3 +1,8 @@
 .venv
 Scratchpad.ipynb
 __pycache__
+.env
+checkpoint.pth
+en_defult_se.pth
+en_style_se.pth
+zh_defult_se.pth
